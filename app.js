@@ -63,3 +63,12 @@ console.log(mappedData);
 // Use the reduce method to calculate the sum of the ages
 const sumOfAges = data.reduce((sum, person) => sum + parseInt(person.age), 0);
 console.log(`Sum of ages: ${sumOfAges}`);
+
+// Part 3: Thinking Critically
+
+// Function to take an object and increment its age field
+function incrementAge(obj) {
+    if (!obj.age) obj.age = 0;
+    obj.age += 1;
+    obj.updated_at = new Date();
+}

@@ -15,3 +15,8 @@ function averageArray(numbers) {
 function longestString(strings) {
     return strings.reduce((longest, str) => str.length > longest.length ? str : longest, "");
 }
+
+// Function to take an array of strings and a number, and return an array of the strings that are longer than the given number
+function stringsLongerThan(strings, length) {
+    return strings.filter(str => str.length > length);
+}

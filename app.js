@@ -81,3 +81,12 @@ function copyAndIncrementAge(obj) {
     newObj.updated_at = new Date();
     return newObj;
 }
+
+// Thought experiment solution to create a new Date object to avoid modifying the original object's Date
+function copyAndIncrementAgeWithNewDate(obj) {
+    const newObj = { ...obj };
+    if (!newObj.age) newObj.age = 0;
+    newObj.age += 1;
+    newObj.updated_at = new Date(new Date().getTime());
+    return newObj;
+}

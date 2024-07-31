@@ -20,3 +20,13 @@ function longestString(strings) {
 function stringsLongerThan(strings, length) {
     return strings.filter(str => str.length > length);
 }
+
+// Function to take a number, n, and print every number between 1 and n without using loops (using recursion)
+function printNumbers(n) {
+    function recursivePrint(current) {
+        if (current > n) return;
+        console.log(current);
+        recursivePrint(current + 1);
+    }
+    recursivePrint(1);
+}

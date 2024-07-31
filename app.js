@@ -44,3 +44,7 @@ const data = [
 // Sort the array by age
 const sortedByAge = data.sort((a, b) => parseInt(a.age) - parseInt(b.age));
 console.log(sortedByAge);
+
+// Filter the array to remove entries with an age greater than 50
+const filteredByAge = data.filter(person => parseInt(person.age) <= 50);
+console.log(filteredByAge);

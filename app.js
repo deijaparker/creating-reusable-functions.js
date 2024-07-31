@@ -48,3 +48,14 @@ console.log(sortedByAge);
 // Filter the array to remove entries with an age greater than 50
 const filteredByAge = data.filter(person => parseInt(person.age) <= 50);
 console.log(filteredByAge);
+
+// Map the array to change the "occupation" key to "job" and increment every age by 1
+const mappedData = data.map(person => {
+    return {
+        ...person,
+        job: person.occupation,
+        age: parseInt(person.age) + 1
+    };
+});
+mappedData.forEach(person => delete person.occupation);
+console.log(mappedData);

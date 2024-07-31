@@ -10,3 +10,8 @@ function averageArray(numbers) {
     const total = sumArray(numbers);
     return total / numbers.length;
 }
+
+// Function to take an array of strings and return the longest string
+function longestString(strings) {
+    return strings.reduce((longest, str) => str.length > longest.length ? str : longest, "");
+}

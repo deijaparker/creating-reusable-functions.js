@@ -30,3 +30,17 @@ function printNumbers(n) {
     }
     recursivePrint(1);
 }
+
+// Part 2: Thinking Methodically
+
+const data = [
+    { id: "42", name: "Bruce", occupation: "Knight", age: "41" },
+    { id: "48", name: "Barry", occupation: "Runner", age: "25" },
+    { id: "57", name: "Bob", occupation: "Fry Cook", age: "19" },
+    { id: "63", name: "Blaine", occupation: "Quiz Master", age: "58" },
+    { id: "7", name: "Bilbo", occupation: "None", age: "111" }
+];
+
+// Sort the array by age
+const sortedByAge = data.sort((a, b) => parseInt(a.age) - parseInt(b.age));
+console.log(sortedByAge);

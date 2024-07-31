@@ -72,3 +72,12 @@ function incrementAge(obj) {
     obj.age += 1;
     obj.updated_at = new Date();
 }
+
+// Function to take an object, make a copy, and increment the age field of the copy. Return the copy.
+function copyAndIncrementAge(obj) {
+    const newObj = { ...obj };
+    if (!newObj.age) newObj.age = 0;
+    newObj.age += 1;
+    newObj.updated_at = new Date();
+    return newObj;
+}

@@ -59,3 +59,7 @@ const mappedData = data.map(person => {
 });
 mappedData.forEach(person => delete person.occupation);
 console.log(mappedData);
+
+// Use the reduce method to calculate the sum of the ages
+const sumOfAges = data.reduce((sum, person) => sum + parseInt(person.age), 0);
+console.log(`Sum of ages: ${sumOfAges}`);
